@@ -85,6 +85,7 @@
 |2667. 단지번호붙이기|[링크](./%EB%B0%B1%EC%A4%80/Silver/2667.%E2%80%85%EB%8B%A8%EC%A7%80%EB%B2%88%ED%98%B8%EB%B6%99%EC%9D%B4%EA%B8%B0/README.md)|
 |2751. 수 정렬하기 2|[링크](./%EB%B0%B1%EC%A4%80/Silver/2751.%E2%80%85%EC%88%98%E2%80%85%EC%A0%95%EB%A0%AC%ED%95%98%EA%B8%B0%E2%80%852/README.md)|
 |2839. 설탕 배달|[링크](./%EB%B0%B1%EC%A4%80/Silver/2839.%E2%80%85%EC%84%A4%ED%83%95%E2%80%85%EB%B0%B0%EB%8B%AC/README.md)|
+|9012. 괄호|[링크](./%EB%B0%B1%EC%A4%80/Silver/9012.%E2%80%85%EA%B4%84%ED%98%B8/README.md)|
 |9351. Casino|[링크](./%EB%B0%B1%EC%A4%80/Silver/9351.%E2%80%85Casino/README.md)|
 ### 🚀 Silver I
 | 문제번호 | 링크 |
