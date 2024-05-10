@@ -35,58 +35,35 @@ public class Main {
         {
             reversesum[i] = reversesum[i+1] +arr[i];
         }
-        
+        int firstbee =0;
+        int secondbee =0;
+        int honey =0;
+        int answer=0;
 
-        int answer =0;
-        for(int i =0; i<n; i++)
+        for(int i =1; i<n-1; i++)
         {
-            int firstbee =0;
-            int secondbee =0;
-            for(int j =0; j<n; j++)
-            {
+            firstbee = sum[i] -sum[0];
+            secondbee = reversesum[i] - reversesum[n-1];
 
-                if(j==i)
-                    continue;
-                else if(j<i)
-                {
-                    firstbee = sum[i] - sum[j];
-
-                }
-                else if(j>i)
-                {
-                    firstbee = reversesum[i] - reversesum[j];
-
-                }
-                for(int k=0; k<n; k++)
-                {
-                    if(k==i || k ==j)
-                        continue;
-                    
-                    else if(k<i)
-                    {
-                        secondbee = sum[i] - sum[k];
-                    }
-                    else if(k>i)
-                    {
-                        secondbee = reversesum[i] - reversesum[k];
-                    }
-                    
-                    if((j<k && k<i)|| (j>k && k>i))
-                        firstbee -= arr[k];
-                    else if((k<j && j<i) || (k>j && j>i))
-                        secondbee -= arr[j];
-
-                    if(firstbee + secondbee > answer)
-                        answer= firstbee+ secondbee;
-                    
-                    if((j<k && k<i)|| (j>k && k>i))
-                        firstbee += arr[k];
-                }
-            }
-
+            if(answer < firstbee+ secondbee)
+                answer=firstbee+secondbee;
             
+            
+            firstbee = sum[n-1] - sum[0] - arr[i];
+            secondbee = sum[n-1] - sum[i];
+
+            if(answer < firstbee+ secondbee)
+                answer=firstbee+secondbee;
+
+
+            firstbee = reversesum[0] - reversesum[n-1] -arr[i];
+            secondbee = reversesum[0] - reversesum[i];
+
+            if(answer < firstbee+ secondbee)
+                answer=firstbee+secondbee;
+
         }
-        
+
         System.out.println(answer);
     }
 
