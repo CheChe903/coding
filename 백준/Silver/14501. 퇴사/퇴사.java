@@ -1,49 +1,41 @@
-import java.util.Arrays;
-import java.util.Scanner;
-
+import java.io.*;
+import java.util.*;
 
 public class Main {
-	public static void main(String[] args) {
 
-                Scanner sc = new Scanner(System.in);
+    public static void main(String[] args) throws IOException {
 
-                int a = sc.nextInt();
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-                int[] needday = new int[a+15];
+        int N = Integer.parseInt(br.readLine());
 
-                int[] pay= new int[a+15];
+        StringTokenizer st;
 
-                int[] max = new int[a+15];
+        int pay[] = new int[N+1];
+        int day[] = new int[N+1];
 
-                for(int i =1; i<=a; i++)
-                {
-                        needday[i] = sc.nextInt();
-                        pay[i] = sc.nextInt();
-                        max[i]=0;
-                }
-                if(needday[a]==1)
-                {
-                        max[a]=pay[a];
-                }
+        int max[] = new int[N+2];
 
-                for(int i=a-1; i>=1; i--)
-                {
-                    int next = i + needday[i];
-                    
-                    if(next > a  +1)
-                    {
-                        max[i] = max[i+1];
-                    }
-                    else
-                    {
-                        max[i]= Math.max(max[i+1], max[i+needday[i]]+pay[i]);
-
-                    }
-                        
-                }
-
-                System.out.println(max[1]);
+        for(int i =1; i<=N; i++) {
+            st = new StringTokenizer(br.readLine());
+            day[i] = Integer.parseInt(st.nextToken());
+            pay[i]= Integer.parseInt(st.nextToken());
         }
 
+        if(day[N] == 1)
+            max[N] = pay[N];
+        for(int i =N; i>=1; i--) {
+            int next = i + day[i];
+
+            if(next > N +1) {
+                max[i] = max[i+1];
+            }
+            else
+                max[i] = Math.max(max[i+1], max[i+day[i]]+pay[i]);
+        }
+
+        System.out.println(max[1]);
+
+    }
 
 }
