@@ -58,6 +58,7 @@
 |24492. Cow Frisbee|[링크](./%EB%B0%B1%EC%A4%80/Gold/24492.%E2%80%85Cow%E2%80%85Frisbee/Cow%E2%80%85Frisbee.cc)|
 |2589. 보물섬|[링크](./%EB%B0%B1%EC%A4%80/Gold/2589.%E2%80%85%EB%B3%B4%EB%AC%BC%EC%84%AC/%EB%B3%B4%EB%AC%BC%EC%84%AC.java)|
 |2636. 치즈|[링크](./%EB%B0%B1%EC%A4%80/Gold/2636.%E2%80%85%EC%B9%98%EC%A6%88/%EC%B9%98%EC%A6%88.java)|
+|3190. 뱀|[링크](./%EB%B0%B1%EC%A4%80/Gold/3190.%E2%80%85%EB%B1%80/%EB%B1%80.java)|
 |4179. 불！|[링크](./%EB%B0%B1%EC%A4%80/Gold/4179.%E2%80%85%EB%B6%88%EF%BC%81/%EB%B6%88%EF%BC%81.java)|
 |7576. 토마토|[링크](./%EB%B0%B1%EC%A4%80/Gold/7576.%E2%80%85%ED%86%A0%EB%A7%88%ED%86%A0/%ED%86%A0%EB%A7%88%ED%86%A0.java)|
 |9252. LCS 2|[링크](./%EB%B0%B1%EC%A4%80/Gold/9252.%E2%80%85LCS%E2%80%852/LCS%E2%80%852.java)|
