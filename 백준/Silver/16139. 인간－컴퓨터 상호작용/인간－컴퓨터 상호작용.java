@@ -9,14 +9,13 @@ public class Main {
 
         int question = Integer.parseInt(br.readLine());
 
-        int check[][] = new int[26][2001];
+        int check[][] = new int[26][S.length()+1];
 
         for(int i =0; i<S.length(); i++) {
-            char currentChar = S.charAt(i);
-
-            for(int j = i; j<S.length(); j++) {
-                check[currentChar -'a'][j]++;
+            for(int j = 0; j<26; j++) {
+                check[j][i+1] = check[j][i];
             }
+            check[S.charAt(i)-'a'][i+1]++;
         }
 
         StringBuilder sb=  new StringBuilder();
@@ -28,12 +27,8 @@ public class Main {
 
             int l = Integer.parseInt(st.nextToken());
             int r = Integer.parseInt(st.nextToken());
-            if(l ==0) {
-                sb.append(check[a-'a'][r]).append("\n");
 
-            }
-            else
-            sb.append(check[a-'a'][r] - check[a-'a'][l-1]).append("\n");
+            sb.append(check[a-'a'][r+1] - check[a-'a'][l]).append("\n");
 
         }
         System.out.println(sb);
