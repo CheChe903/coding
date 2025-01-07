@@ -14,39 +14,40 @@ public class Main {
         S = br.readLine();
 
         int answer = 0;
-
+        int currentLength = 0;
+        boolean oTime= false;
+        boolean iTime = true;
         for(int i =0; i<S.length(); i++) {
-            if(S.charAt(i) == 'I') {
-                if(check(i)) {
-                    answer+=1;
+            if(iTime && !oTime && S.charAt(i) =='I') {
+                currentLength+=1;
+                iTime = false;
+                oTime = true;
+            }
+            else if(!iTime && oTime && S.charAt(i) == 'O') {
+                currentLength+=1;
+                iTime = true;
+                oTime = false;
+            }
+            else {
+                if(currentLength >= N*2+1) {
+                    answer += (currentLength - (2*N+1)) / 2 + 1;
+                }
+                if(S.charAt(i) == 'I') { 
+                    currentLength = 1;
+                    iTime = false;
+                    oTime = true;
+                } else {
+                    currentLength = 0;
+                    iTime = true;
+                    oTime = false;
                 }
             }
         }
 
+        if(currentLength >= N*2+1) {
+            answer += (currentLength - (2*N+1)) / 2 + 1;
+        }
+
         System.out.println(answer);
-    }
-    static boolean check(int startIndex) {
-        int oCount = 0;
-
-        int maxLength = N*2 +1;
-        boolean checking = true;
-        for(int i = startIndex; i< startIndex+ maxLength; i++) {
-            if(i > S.length()-1) {
-                checking = false;
-                break;
-            }
-            if(i != startIndex &&i > 0 && S.charAt(i)  == S.charAt(i-1)) {
-                checking = false;
-                break;
-            }
-            if(S.charAt(i) == 'O') {
-                oCount+=1;
-            }
-        }
-
-        if(oCount == N && checking) {
-            return true;
-        }
-        return false;
     }
 }
