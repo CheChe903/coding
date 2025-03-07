@@ -36,6 +36,7 @@
 | 문제번호 | 링크 |
 | ----- | ----- |
 |10026. 적록색약|[링크](./%EB%B0%B1%EC%A4%80/Gold/10026.%E2%80%85%EC%A0%81%EB%A1%9D%EC%83%89%EC%95%BD/README.md)|
+|1011. Fly me to the Alpha Centauri|[링크](./%EB%B0%B1%EC%A4%80/Gold/1011.%E2%80%85Fly%E2%80%85me%E2%80%85to%E2%80%85the%E2%80%85Alpha%E2%80%85Centauri/README.md)|
 |1016. 제곱 ㄴㄴ 수|[링크](./%EB%B0%B1%EC%A4%80/Gold/1016.%E2%80%85%EC%A0%9C%EA%B3%B1%E2%80%85%E3%84%B4%E3%84%B4%E2%80%85%EC%88%98/README.md)|
 |1068. 트리|[링크](./%EB%B0%B1%EC%A4%80/Gold/1068.%E2%80%85%ED%8A%B8%EB%A6%AC/README.md)|
 |1074. Z|[링크](./%EB%B0%B1%EC%A4%80/Gold/1074.%E2%80%85Z/Z.java)|
