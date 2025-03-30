@@ -39,6 +39,7 @@
 |1011. Fly me to the Alpha Centauri|[링크](./%EB%B0%B1%EC%A4%80/Gold/1011.%E2%80%85Fly%E2%80%85me%E2%80%85to%E2%80%85the%E2%80%85Alpha%E2%80%85Centauri/README.md)|
 |1013. Contact|[링크](./%EB%B0%B1%EC%A4%80/Gold/1013.%E2%80%85Contact/README.md)|
 |1016. 제곱 ㄴㄴ 수|[링크](./%EB%B0%B1%EC%A4%80/Gold/1016.%E2%80%85%EC%A0%9C%EA%B3%B1%E2%80%85%E3%84%B4%E3%84%B4%E2%80%85%EC%88%98/README.md)|
+|1038. 감소하는 수|[링크](./%EB%B0%B1%EC%A4%80/Gold/1038.%E2%80%85%EA%B0%90%EC%86%8C%ED%95%98%EB%8A%94%E2%80%85%EC%88%98/README.md)|
 |1068. 트리|[링크](./%EB%B0%B1%EC%A4%80/Gold/1068.%E2%80%85%ED%8A%B8%EB%A6%AC/README.md)|
 |1074. Z|[링크](./%EB%B0%B1%EC%A4%80/Gold/1074.%E2%80%85Z/Z.java)|
 |10986. 나머지 합|[링크](./%EB%B0%B1%EC%A4%80/Gold/10986.%E2%80%85%EB%82%98%EB%A8%B8%EC%A7%80%E2%80%85%ED%95%A9/%EB%82%98%EB%A8%B8%EC%A7%80%E2%80%85%ED%95%A9.java)|
