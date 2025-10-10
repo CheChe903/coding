@@ -1,30 +1,30 @@
-import java.util.*;
 class Solution {
     public String[] solution(int n, int[] arr1, int[] arr2) {
-        String[] answer = {};
-        answer = new String[n];
+        String[] answer = new String[n];
         
-        for(int i=0; i<n; i++)
-        {
-            String str ="";
-            String str1 = String.format("%" + n + "s", Integer.toBinaryString(arr1[i])).replace(' ', '0');
-            // 두 번째 배열의 이진 문자열 생성
-            String str2 = String.format("%" + n + "s", Integer.toBinaryString(arr2[i])).replace(' ', '0');
-
-            for (int j =0; j<n; j++)
-            {
-                if(str1.charAt(j)=='1' || str2.charAt(j)=='1')
-                {
-                    str+="#";
+        int arr[][] = new int[n][n];
+        
+        for(int i =0; i<n; i++) {
+            String binary1 = addZero(Integer.toBinaryString(arr1[i]), n);
+            String binary2 = addZero(Integer.toBinaryString(arr2[i]), n);
+            String answer2 = "";
+            for(int j =0; j<n; j++) {
+                if(binary1.charAt(j) == '1' || binary2.charAt(j) == '1') {
+                    answer2 = answer2 +"#";
                 }
-                else
-                {
-                    str+=" ";
+                else {
+                    answer2 = answer2 +" ";
                 }
             }
-            answer[i]=str;
+            answer[i] = answer2;
         }
         return answer;
-
+    }
+    
+    public String addZero(String str, int n) {
+        while(str.length() != n) {
+            str = "0"+ str;
+        }
+        return str;
     }
 }
