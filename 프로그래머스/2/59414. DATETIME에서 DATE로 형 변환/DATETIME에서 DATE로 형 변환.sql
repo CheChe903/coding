@@ -2,7 +2,7 @@
 SELECT
     ANIMAL_ID,
     NAME,
-    SUBSTRING(DATETIME, 1,10) as '날짜'
+    DATE_FORMAT(DATETIME, '%Y-%m-%d') as '날짜'
     
 FROM
     ANIMAL_INS;
