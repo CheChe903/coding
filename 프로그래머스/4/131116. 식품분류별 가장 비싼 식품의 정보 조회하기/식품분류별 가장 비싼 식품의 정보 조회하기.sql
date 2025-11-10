@@ -1,13 +1,15 @@
+-- 코드를 입력하세요
 SELECT
-    category,
-    price AS max_price,
-    product_name
-FROM food_product
-WHERE category IN ('식용유', '과자', '국', '김치')
-  AND (category, price) IN (
-      SELECT category, MAX(price)
-      FROM food_product
-      WHERE category IN ('식용유', '과자', '국', '김치')
-      GROUP BY category
-  )
-ORDER BY max_price DESC;
+category,
+price as max_price,
+product_name
+from food_product
+where category in ('식용유', '김치', '국', '과자')
+and (category, price) in (
+    select category, max(price)
+    from food_product
+    where category in ('식용유', '김치', '국', '과자')
+    group by category
+)
+group by category, product_name
+order by max_price desc;
