@@ -1,7 +1,7 @@
-SELECT 
-    MCDP_CD AS '진료과 코드', 
-    COUNT(*) AS '5월예약건수'
-FROM APPOINTMENT
-WHERE APNT_YMD REGEXP '2022-05'
-GROUP BY MCDP_CD
-ORDER BY COUNT(*), MCDP_CD
+select 
+mcdp_cd as '진료과코드',
+count(*) as '5월예약건수'
+from APPOINTMENT
+where apnt_ymd like '2022-05%'
+group by mcdp_cd
+order by count(*), mcdp_cd;
