@@ -1,27 +1,22 @@
+import java.util.*;
+
 class Solution {
     public int solution(int[] citations) {
         int answer = 0;
-        int arr[] = new int[citations.length+1];
         
-        for(int i : citations)
-        {
-            int cur =i;
-            if(cur > citations.length)
-                cur = citations.length;
+        Arrays.sort(citations);
+        
+        for(int i =0; i<citations.length; i++) {
+            int cur = citations[i];
             
-            arr[cur]++;
-        }
-        int sum =0;
-        for(int i = arr.length-1; i>=1; i--)
-        {
-            sum += arr[i];
-            
-            if(sum >= i)
-            {
-                answer = i;
+            if(citations.length- i <= cur) {
+                answer= citations.length-i;
                 break;
             }
-        }
+        }        
         return answer;
     }
 }
+
+//0 1 3 5 6
+//1 2 5 6 7
