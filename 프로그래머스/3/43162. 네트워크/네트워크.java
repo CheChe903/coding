@@ -1,59 +1,49 @@
 import java.util.*;
+
 class Solution {
-    static boolean[] visited;
-    static ArrayList<Integer>[] A;
-    static int max;
+    
+    static ArrayList<Integer> list[];
+    static boolean visited[];
     public int solution(int n, int[][] computers) {
         int answer = 0;
-        max =1;
-        visited = new boolean[n+1];
-
-        A = new ArrayList[n+1];
-
-        for(int i =1; i<=n; i++)
-        {
-            A[i] = new ArrayList<Integer>();
+        
+        list = new ArrayList[n+1];
+        
+        for(int i =1; i<=n; i++) {
+            list[i] = new ArrayList<Integer>();
         }
-
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < n; j++) {
-                if (computers[i][j] == 1) { // If there's a connection between i and j
-                    A[i+1].add(j+1); // Adjust indices because i and j are zero-based
+        visited = new boolean[n+1];
+        for(int i =0; i<computers.length; i++) {
+            for(int j =0; j<computers[i].length;j++) {
+                if(computers[i][j] == 1) {
+                    list[i+1].add(j+1);
+                    list[j+1].add(i+1);
                 }
             }
         }
         
-        for(int i =1; i<=n; i++)
-        {
-            if(visited[i]==false)
-            {
-                dfs(i);
-                answer++;
-
+        for(int i =1; i<=n; i++) {
+            if(!visited[i]){
+                bfs(i);
+                answer+=1;
             }
         }
+        
         return answer;
     }
-    static void dfs(int value)
-    {
-        if(visited[value])
-            return;
-
+    static void bfs(int start) {
+        
         Queue<Integer> queue = new LinkedList<>();
+        
+        queue.add(start);
 
-        visited[value]=true;
-        queue.add(value);
-
-        while(!queue.isEmpty())
-        {
-            int now =queue.poll();
-            max=now;
-            for(int i : A[now])
-            {
-                if(visited[i]==false)
-                {
-                    visited[i]=true;
-                    queue.add(i);
+        while(!queue.isEmpty()) {
+            int now = queue.poll();
+            
+            for(int cur : list[now]) {
+                if(!visited[cur]) {
+                    queue.add(cur);
+                    visited[cur] = true;
                 }
             }
         }
