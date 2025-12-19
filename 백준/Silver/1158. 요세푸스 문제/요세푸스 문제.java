@@ -1,41 +1,42 @@
-import java.util.*;
 import java.io.*;
+import java.util.*;
 
 public class Main {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws Exception {
+
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         StringTokenizer st = new StringTokenizer(br.readLine());
 
         int N = Integer.parseInt(st.nextToken());
+
         int K = Integer.parseInt(st.nextToken());
 
-        Queue<Integer>queue = new LinkedList<>();
-
-        for(int i =1; i <=N; i++) {
+        Queue<Integer> queue = new LinkedList<>();
+        StringBuilder sb = new StringBuilder();
+        sb.append("<");
+        for(int i = 1;i <=N; i++) {
             queue.add(i);
         }
-        int index = 1;
-        ArrayList<Integer>list  = new ArrayList<>();
-        while(!(queue.size() == 0)) {
-
-            if(index != K) {
-                int cur = queue.poll();
-                queue.add(cur);
-                index++;
+        int index= 0;
+        while(!queue.isEmpty()) {
+            int temp = queue.poll();
+            index+=1;
+            if(index == K) {
+                if(!queue.isEmpty()) {
+                    sb.append(temp).append(", ");
+                } else {
+                    sb.append(temp);
+                }
+                index =0;
+            } else {
+                queue.add(temp);
             }
-            else if(index ==K) {
-                int cur = queue.poll();
-                list.add(cur);
-                index=1;
-            }
+            
         }
-        System.out.print("<");
 
-        for(int i =0; i<N-1; i++) {
-            System.out.print(list.get(i)+", ");
-        }
-        System.out.print(list.get(N-1));
-        System.out.print(">");
+        sb.append(">");
+
+        System.out.println(sb);
     }
 }
